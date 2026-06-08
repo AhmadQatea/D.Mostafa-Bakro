@@ -357,8 +357,8 @@
                      class="logo-img absolute"
                      style="
                          z-index: 2;
-                         width: 108px;
-                         height: 108px;
+                         width: 220px;
+                         height: 220px;
                          top: 50%;
                          left: 50%;
                          transform: translate(-50%, -50%);
@@ -470,15 +470,51 @@
         </div>
 
         <!-- ═══ LOCATION ═══ -->
-        <div class="fade-in glass-card rounded-xl p-4 max-w-sm w-full mb-6 text-center"
-             style="transition-delay:600ms">
-            <div class="flex items-center justify-center gap-2 mb-1">
-                <i class="fa-solid fa-location-dot text-brand-gold text-sm"></i>
-                <h3 class="font-bold text-brand-gold text-sm">العنوان</h3>
+        <div class="fade-in w-full max-w-sm mb-6" style="transition-delay:600ms">
+
+            <!-- Address card + open in maps button -->
+            <div class="glass-card rounded-xl p-4 mb-3 text-center">
+                <div class="flex items-center justify-center gap-2 mb-1">
+                    <i class="fa-solid fa-location-dot text-brand-gold text-sm"></i>
+                    <h3 class="font-bold text-brand-gold text-sm">العنوان</h3>
+                </div>
+                <p class="text-white/70 text-xs leading-relaxed mb-3">
+                    ملس - طريق كوارو - جانب مجلس مدينة ملس
+                </p>
+                <!-- Open in Google Maps -->
+                <a href="https://www.google.com/maps?q=36.005556,36.487611"
+                   target="_blank" rel="noopener noreferrer"
+                   class="social-btn inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-brand-dark"
+                   style="background: linear-gradient(135deg,#f0d98a,#c9a961);">
+                    <i class="fa-solid fa-map-location-dot text-sm"></i>
+                    افتح في خرائط جوجل
+                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
             </div>
-            <p class="text-white/70 text-xs leading-relaxed">
-                ملس - طريق كوارو - جانب مجلس مدينة ملس
-            </p>
+
+            <!-- Embedded Google Maps iframe -->
+            <div class="glass-card rounded-xl overflow-hidden"
+                 style="border:1px solid rgba(201,169,97,0.25)">
+                <iframe
+                    title="موقع عيادة د. مصطفى فراس بكرو"
+                    width="100%"
+                    height="200"
+                    style="display:block; border:0; filter:saturate(0.7) brightness(0.85) contrast(1.05);"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps?q=36.005556,36.487611&z=16&output=embed">
+                </iframe>
+                <!-- Overlay link to open maps on tap (mobile-friendly) -->
+                <a href="https://www.google.com/maps?q=36.005556,36.487611"
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-2 py-2 text-brand-gold text-xs font-bold"
+                   style="background:rgba(45,27,78,0.6); border-top:1px solid rgba(201,169,97,0.15);">
+                    <i class="fa-solid fa-diamond-turn-right text-xs"></i>
+                    احصل على الاتجاهات
+                </a>
+            </div>
+
         </div>
 
         <!-- ═══ FOOTER ═══ -->
